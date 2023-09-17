@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ictu_mall_manager/home/views/home-screen.dart';
-import 'package:ictu_mall_manager/product/model/product-list-screen.dart';
+import 'package:ictu_mall_manager/product/views/product-list-screen.dart';
 import 'package:ictu_mall_manager/sell/views/sell-screen.dart';
 import 'package:ictu_mall_manager/setting/views/setting-screen.dart';
 import 'package:ictu_mall_manager/utils/app-color.dart';
@@ -32,26 +32,26 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.monetization_on),
-        title: 'Bonus',
+        icon: const Icon(Icons.production_quantity_limits_rounded),
+        title: 'Products',
         activeColorPrimary: Colors.green,
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.qr_code, color: Colors.white),
-        title: 'QR Scan',
+        title: 'QR Sell',
         activeColorPrimary: AppColor.mainColor,
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.card_travel_rounded),
-        title: 'Cart',
+        icon: const Icon(Icons.house_siding_rounded),
+        title: 'Ware house',
         activeColorPrimary: Colors.purple,
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.person),
-        title: 'Account',
+        icon: const Icon(Icons.settings),
+        title: 'Setting',
         activeColorPrimary: Colors.orange,
         inactiveColorPrimary: Colors.grey,
       ),

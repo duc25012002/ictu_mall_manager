@@ -39,6 +39,8 @@ dependencies:
       flutter_svg: ^2.0.7
       http: ^1.1.0
       logger: ^2.0.2
+      get_storage: ^2.1.1
+      path_provider: ^2.0.15
 
 dev_dependencies:
       flutter_test:
@@ -62,6 +64,6 @@ flutter:
       uses-material-design: true
 
       # To add assets to your application, add an assets section, like this:
-assets:
-      - assets/images/
-      - assets/images/svg-login.svg
+      assets:
+            - assets/images/
+            - assets/images/sell.png

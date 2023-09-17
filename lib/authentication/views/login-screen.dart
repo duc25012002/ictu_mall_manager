@@ -45,7 +45,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   children: [
                     const SizedBox(height: 150),
-                    // SvgPicture.asset('assets/images/svg-login.svg'),
+                    SvgPicture.asset(
+                      'assets/images/logo_app.svg',
+                      width: 150,
+                      height: 150,
+                    ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Column(
