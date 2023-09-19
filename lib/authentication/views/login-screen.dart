@@ -2,10 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/authentication/controller/auth-controller.dart';
-
 import 'package:ictu_mall_manager/authentication/widgets/input-password.dart';
 import 'package:ictu_mall_manager/authentication/widgets/input-email.dart';
 import 'package:ictu_mall_manager/authentication/widgets/title.dart';

@@ -4,13 +4,36 @@ class UserModel {
   String? email;
   String? password;
   String? access_token;
+  String? name;
+  String? avatar;
+  String? address;
+  String? gender;
+  int? role;
+  String? date;
+  String? phone;
 
-  UserModel({this.email, this.password, this.access_token});
+  UserModel({
+    this.email,
+    this.password,
+    this.access_token,
+    this.name,
+    this.avatar,
+    this.address,
+    this.gender,
+    this.role,
+    this.date,
+    this.phone,
+  });
 
   Map<String, dynamic> toJson() {
     return {
       'email': email,
       'password': password,
+      'avatar': avatar,
+      'gender': gender,
+      'name': name,
+      'address': address,
+      'phone': phone,
     };
   }
 

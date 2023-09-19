@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/api/api.dart';
 import 'package:ictu_mall_manager/authentication/model/user-model.dart';
@@ -30,15 +31,17 @@ class AuthController {
         var resData = jsonDecode(res.body);
         print(res.body);
         await saveLocal.writeDataToLocal(
-            'token', resData['data']['access_token']);
-        Get.snackbar('IMM', 'Đăng nhập thành công');
+          'token',
+          resData['data']['access_token'],
+        );
+        Fluttertoast.showToast(msg: 'Đăng nhập thành công');
         Get.offAllNamed(Routes.dashBoard);
       } else {
         print(res.body);
-        Get.snackbar('IMM', 'Sai tên đăng nhập hoặc mật khẩu');
+        Fluttertoast.showToast(msg: 'Đăng nhập thành công');
       }
     } catch (exception) {
-      log.e("", error: exception.toString());
+      log.w("", error: exception.toString());
     }
   }
 }

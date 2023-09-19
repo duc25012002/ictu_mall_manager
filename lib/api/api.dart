@@ -3,5 +3,6 @@
 class API {
   static const IMM = 'https://intent-woodcock-needed.ngrok-free.app';
   static const loginAPI = '$IMM/api/login';
+  static const getUserInfomation = '$IMM/api/information';
   static const getListProductAPI = '$IMM/api/product';
 }
