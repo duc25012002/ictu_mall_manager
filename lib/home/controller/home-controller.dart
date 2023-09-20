@@ -24,7 +24,7 @@ class HomeController {
         'Authorization': 'Bearer $token',
       });
       if (res.statusCode == 200) {
-        print('${res.statusCode}😂'); // Sửa lỗi cú pháp ở đây
+        print('${res.statusCode}😂');
         var resUserInfomation = jsonDecode(res.body);
 
         userModel = UserModel(
@@ -37,7 +37,7 @@ class HomeController {
           phone: resUserInfomation['data']['sdt'],
         );
       } else {
-        print('${res.statusCode}X😂'); // Sửa lỗi cú pháp ở đây
+        print('${res.statusCode}X😂');
       }
     } catch (exception) {
       print(exception.toString());
