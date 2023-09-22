@@ -68,19 +68,19 @@ class _WarehouseScreenState extends State<WarehouseScreen> {
                     size: 25,
                     color: AppColor.mainColor,
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 30),
                   InkWell(
-                      onTap: () {
-                        print('aaaaa');
-                        getImage(ImageSource.gallery);
-                      },
-                      child: SizedBox(
-                        width: 500,
-                        height: 500,
-                        child: image != null
-                            ? Image.file(File(image!.path))
-                            : Image.asset('assets/images/avatar.jpeg'),
-                      )),
+                    onTap: () {
+                      getImage(ImageSource.gallery);
+                    },
+                    child: SizedBox(
+                      width: 200,
+                      height: 200,
+                      child: image != null
+                          ? Image.file(File(image!.path))
+                          : Image.asset('assets/images/add.png'),
+                    ),
+                  ),
                   const SizedBox(height: 50),
                   Container(
                       width: MediaQuery.sizeOf(context).width - 10,

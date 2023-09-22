@@ -1,4 +1,4 @@
-// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: library_private_types_in_public_api, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:ictu_mall_manager/authentication/model/user-model.dart';
@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Container(
                     width: MediaQuery.sizeOf(context).width,
-                    height: MediaQuery.sizeOf(context).height / 2,
+                    height: MediaQuery.sizeOf(context).height / 1.5,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage('assets/images/bgr.jpeg'),
@@ -54,23 +54,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(10),
                         child: Column(
                           children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                TextWidget(
-                                  text: 'User Information',
-                                  size: 25,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(
-                                    Icons.qr_code,
-                                    color: Colors.white,
-                                  ),
-                                )
-                              ],
+                            TextWidget(
+                              text: 'User Information',
+                              size: 25,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
                             ),
                             Padding(
                               padding: const EdgeInsets.symmetric(
@@ -78,11 +66,11 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
-                                  const CircleAvatar(
+                                  CircleAvatar(
                                     radius: 50,
                                     backgroundColor: Colors.white,
                                     backgroundImage:
-                                        AssetImage('assets/images/avatar.jpeg'),
+                                        NetworkImage(userModel.avatar!),
                                   ),
                                   const SizedBox(width: 30),
                                   Column(
