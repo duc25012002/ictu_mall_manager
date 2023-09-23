@@ -60,8 +60,8 @@ class _ProductListScreenState extends State<ProductListScreen> {
                                     product.img != null
                                         ? 'https://intent-woodcock-needed.ngrok-free.app/storage/images/hanghoa/1680776320.png'
                                         : product.img,
-                                    width: 100,
-                                    height: 100),
+                                    width: 80,
+                                    height: 80),
                                 const SizedBox(width: 30),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,24 +69,24 @@ class _ProductListScreenState extends State<ProductListScreen> {
                                     TextWidget(
                                         text:
                                             'Tên hàng hoá: ${product.tenHangHoa}',
-                                        size: 15,
+                                        size: 13,
                                         color: Colors.black),
                                     TextWidget(
                                         text: 'Mô tả: ${product.moTa}',
-                                        size: 15,
+                                        size: 13,
                                         color: Colors.black),
                                     TextWidget(
                                         text: 'Giá bán: ${product.giaBan}',
-                                        size: 15,
+                                        size: 13,
                                         color: Colors.black),
                                     TextWidget(
                                         text: 'Barcode: ${product.barcode}',
-                                        size: 15,
+                                        size: 13,
                                         color: Colors.black),
                                     TextWidget(
                                         text:
                                             'Đơn vị tính: ${product.donViTinh}',
-                                        size: 15,
+                                        size: 13,
                                         color: Colors.black),
                                   ],
                                 )

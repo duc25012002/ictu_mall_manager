@@ -1,6 +1,8 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ictu_mall_manager/routes/routes.dart';
 import 'package:ictu_mall_manager/utils/app-color.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';
 
@@ -24,6 +26,18 @@ class _SettingScreenState extends State<SettingScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Column(
                 children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextWidget(text: 'Logout', size: 15),
+                      IconButton(
+                          onPressed: () {
+                            Get.offAllNamed(Routes.login);
+                          },
+                          icon: const Icon(Icons.logout, size: 18)),
+                    ],
+                  ),
+                  const SizedBox(height: 100),
                   const CircleAvatar(
                     radius: 50,
                     backgroundColor: Colors.white,
@@ -62,55 +76,6 @@ class _SettingScreenState extends State<SettingScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const Icon(
-                                Icons.notifications_outlined,
-                                size: 30,
-                              ),
-                              const SizedBox(width: 10),
-                              TextWidget(
-                                text: 'Notification',
-                                size: 15,
-                                fontWeight: FontWeight.w400,
-                                color: Theme.of(context).colorScheme.primary,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 5),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const Icon(
-                                Icons.vpn_lock_rounded,
-                                size: 30,
-                              ),
-                              const SizedBox(width: 10),
-                              TextWidget(
-                                text: 'Language',
-                                size: 15,
-                                fontWeight: FontWeight.w400,
-                                color: Theme.of(context).colorScheme.primary,
-                              ),
-                              const Spacer(),
-                              TextWidget(
-                                text: 'English',
-                                size: 15,
-                                fontWeight: FontWeight.w400,
-                                color: AppColor.mainColor,
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 5),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const Icon(
                                 Icons.delete,
                                 size: 30,
                               ),
@@ -120,7 +85,7 @@ class _SettingScreenState extends State<SettingScreen> {
                                   //...
                                 },
                                 child: TextWidget(
-                                  text: 'Delete Account',
+                                  text: 'Logout',
                                   size: 15,
                                   fontWeight: FontWeight.w400,
                                   color: Theme.of(context).colorScheme.primary,
