@@ -55,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           const SizedBox(height: 30),
                           TextWidget(
                             text: 'ICTU MALL MANAGER',
-                            size: 30,
+                            size: 25,
                             color: AppColor.mainColor,
                             fontWeight: FontWeight.bold,
                           ),
@@ -98,7 +98,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ),
                                 onPressed: () async {
                                   if (formKey.currentState!.validate()) {
-                                    //...
                                     await authController.loginController(
                                         emailController.text,
                                         passwordController.text);
@@ -117,16 +116,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    InkWell(
-                      onTap: () {},
-                      child: const Text(
-                        'Reset Password',
-                        style: TextStyle(
-                            color: Colors.red,
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ),
                   ],
                 ),
               )

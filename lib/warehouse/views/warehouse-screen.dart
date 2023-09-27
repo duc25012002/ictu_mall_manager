@@ -9,14 +9,14 @@ import 'package:ictu_mall_manager/utils/text-widget.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
-class WarehouseScreen extends StatefulWidget {
-  const WarehouseScreen({super.key});
+class HistorySell extends StatefulWidget {
+  const HistorySell({super.key});
 
   @override
-  State<WarehouseScreen> createState() => _WarehouseScreenState();
+  State<HistorySell> createState() => _HistorySellState();
 }
 
-class _WarehouseScreenState extends State<WarehouseScreen> {
+class _HistorySellState extends State<HistorySell> {
   String? phone;
 
   TextEditingController productCode = TextEditingController();
@@ -62,6 +62,15 @@ class _WarehouseScreenState extends State<WarehouseScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Column(
                 children: [
+                  Row(
+                    children: [
+                      IconButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          icon: const Icon(Icons.arrow_back)),
+                    ],
+                  ),
                   const SizedBox(height: 10),
                   TextWidget(
                     text: '- - Add Product - -',

@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'dart:convert';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ictu_mall_manager/api/api.dart';
 import 'package:ictu_mall_manager/local/save-local.dart';
 import 'package:http/http.dart' as http;
@@ -35,6 +36,7 @@ class ProductController {
       }
     } catch (exception) {
       print(exception.toString());
+      Fluttertoast.showToast(msg: 'Không lấy được danh sách hàng hoá');
       throw Exception('Failed to load products');
     }
   }

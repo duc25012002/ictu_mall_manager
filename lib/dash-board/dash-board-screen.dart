@@ -19,7 +19,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
     HomeScreen(),
     ProductListScreen(),
     SellScreen(),
-    WarehouseScreen(),
+    HistorySell(),
     SettingScreen(),
   ];
 
@@ -44,8 +44,8 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.house_siding_rounded),
-        title: 'Ware house',
+        icon: const Icon(Icons.history),
+        title: 'History',
         activeColorPrimary: Colors.purple,
         inactiveColorPrimary: Colors.grey,
       ),

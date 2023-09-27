@@ -14,8 +14,6 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
-  String? email;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +35,7 @@ class _SettingScreenState extends State<SettingScreen> {
                           icon: const Icon(Icons.logout, size: 18)),
                     ],
                   ),
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 150),
                   const CircleAvatar(
                     radius: 50,
                     backgroundColor: Colors.white,
@@ -45,7 +43,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   ),
                   const SizedBox(height: 10),
                   TextWidget(
-                    text: email != null ? email! : 'Email',
+                    text: 'Email',
                     size: 20,
                     fontWeight: FontWeight.w400,
                     color: AppColor.mainColor,
@@ -53,7 +51,7 @@ class _SettingScreenState extends State<SettingScreen> {
                   const SizedBox(height: 20),
                   Container(
                     width: MediaQuery.sizeOf(context).width,
-                    height: 200,
+                    height: 50,
                     decoration: BoxDecoration(
                       color: Theme.of(context).colorScheme.onBackground,
                       borderRadius: BorderRadius.circular(6),
@@ -65,56 +63,75 @@ class _SettingScreenState extends State<SettingScreen> {
                         ),
                       ],
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20, vertical: 5),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const Icon(
-                                Icons.delete,
-                                size: 30,
-                              ),
-                              const SizedBox(width: 10),
-                              InkWell(
-                                onTap: () {
-                                  //...
-                                },
-                                child: TextWidget(
-                                  text: 'Logout',
-                                  size: 15,
-                                  fontWeight: FontWeight.w400,
-                                  color: Theme.of(context).colorScheme.primary,
-                                ),
-                              ),
-                            ],
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Icon(
+                            Icons.person,
+                            size: 30,
                           ),
+                          const SizedBox(width: 10),
+                          InkWell(
+                            onTap: () {
+                              //...
+                              Get.toNamed(Routes.editProfile);
+                            },
+                            child: TextWidget(
+                              text: 'Change Infomation',
+                              size: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    width: MediaQuery.sizeOf(context).width,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.onBackground,
+                      borderRadius: BorderRadius.circular(6),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x33000000),
+                          offset: Offset(0.5, 0.5),
+                          blurRadius: 5.5,
                         ),
                       ],
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20, vertical: 20),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const Icon(
-                          Icons.messenger_outline_rounded,
-                          size: 30,
-                        ),
-                        const SizedBox(width: 10),
-                        TextWidget(
-                          text: 'Contact Us',
-                          size: 15,
-                          fontWeight: FontWeight.w400,
-                          color: Theme.of(context).colorScheme.primary,
-                        ),
-                      ],
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20, vertical: 5),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Icon(
+                            Icons.person,
+                            size: 30,
+                          ),
+                          const SizedBox(width: 10),
+                          InkWell(
+                            onTap: () {
+                              //...
+                              Get.toNamed(Routes.changedPass);
+                            },
+                            child: TextWidget(
+                              text: 'Change Password',
+                              size: 15,
+                              fontWeight: FontWeight.w400,
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
