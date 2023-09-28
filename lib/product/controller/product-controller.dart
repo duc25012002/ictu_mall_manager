@@ -5,7 +5,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ictu_mall_manager/api/api.dart';
 import 'package:ictu_mall_manager/local/save-local.dart';
 import 'package:http/http.dart' as http;
-import 'package:ictu_mall_manager/product/model/product.dart';
+import 'package:ictu_mall_manager/model/product.dart';
 
 class ProductController {
   Future<List<Product>> getListProduct() async {

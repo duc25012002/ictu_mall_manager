@@ -1,7 +1,7 @@
 // ignore_for_file: library_private_types_in_public_api, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:ictu_mall_manager/authentication/model/user-model.dart';
+import 'package:ictu_mall_manager/model/user-model.dart';
 import 'package:ictu_mall_manager/home/controller/home-controller.dart';
 import 'package:ictu_mall_manager/home/widgets/item-cart.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';

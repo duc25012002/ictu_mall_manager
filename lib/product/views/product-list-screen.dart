@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ictu_mall_manager/product/controller/product-controller.dart';
-import 'package:ictu_mall_manager/product/model/product.dart';
+import 'package:ictu_mall_manager/model/product.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';
 
 class ProductListScreen extends StatefulWidget {

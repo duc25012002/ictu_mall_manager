@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/api/api.dart';
-import 'package:ictu_mall_manager/authentication/model/user-model.dart';
+import 'package:ictu_mall_manager/model/user-model.dart';
 import 'package:http/http.dart' as http;
 import 'package:ictu_mall_manager/local/save-local.dart';
 import 'package:ictu_mall_manager/routes/routes.dart';

@@ -1,5 +1,4 @@
 // ignore_for_file: file_names
-import 'dart:convert';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:ictu_mall_manager/api/api.dart';
@@ -17,7 +16,6 @@ class SetingController {
   Future<void> updateInformation(
       String name, String date, String address, String gender) async {
     var token = await getUserToken();
-    print('jsdbjabjdsbjbjadb😂sj tokennnnnnn $token');
     final Uri uri = Uri.parse(API.updateInfomation);
     final Map<String, String> params = {
       'name': name,
