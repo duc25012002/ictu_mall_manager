@@ -4,6 +4,8 @@ import 'package:http/http.dart' as http;
 import 'package:ictu_mall_manager/api/api.dart';
 
 class SellController {
+
+  
   Future<void> fetchData(String searchTerm) async {
     final Uri uri = Uri.parse(API.postBarCode);
     final Map<String, String> params = {'maSanPham': searchTerm};

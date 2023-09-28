@@ -9,7 +9,6 @@ class SetingController {
 
   getUserToken() async {
     var token = await saveLocal.readDataToLocal('token');
-    print('Bearer $token');
     return token;
   }
 
@@ -28,25 +27,21 @@ class SetingController {
 
     final response = await http.post(
       uri.replace(queryParameters: params),
-      headers: {
-        'Authorization': 'Bearer $token',
-      },
+      headers: {'Authorization': 'Bearer $token'},
     );
     print(response.body);
     if (response.statusCode == 200) {
       Fluttertoast.showToast(msg: 'Cập nhật thông tin cá nhân thành công.');
     } else {
       Fluttertoast.showToast(msg: 'Vui lòng cập nhật lại thông tin cá nhân.');
-      throw Exception('Failed to update information');
     }
   }
 
   Future<void> changedPassword(
       String oldPassword, String password, String passwordConfirmation) async {
     var token = await getUserToken();
-    print('jsdbjabjdsbjbjadb😂sj tokennnnnnn $token');
 
-    final Uri uri = Uri.parse(API.updateInfomation);
+    final Uri uri = Uri.parse(API.changedPassword);
     final Map<String, String> params = {
       'old_password': oldPassword,
       'password': password,
@@ -66,7 +61,6 @@ class SetingController {
       Fluttertoast.showToast(msg: 'Cập nhật mật khẩu thành công.');
     } else {
       Fluttertoast.showToast(msg: 'Vui lòng cập nhật lại mật khẩu.');
-      throw Exception('Failed to update information');
     }
   }
 }

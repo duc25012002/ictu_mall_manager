@@ -25,12 +25,11 @@ class _SellScreenState extends State<SellScreen> {
             print('Barcode data: ');
             while (true) {
               String barcode = await FlutterBarcodeScanner.scanBarcode(
-                '#ff6666', // Màu của nút quét
-                'Cancel', // Văn bản nút hủy bỏ
-                true, // Ẩn nút hủy bỏ
-                ScanMode.BARCODE, // Chế độ quét (mã vạch)
+                '#ff6666',
+                'Thoát',
+                true,
+                ScanMode.BARCODE,
               );
-              print('Barcode data: $barcode');
               if (barcode != null) {
                 await sellController!.fetchData(barcode);
               } else {
@@ -39,7 +38,7 @@ class _SellScreenState extends State<SellScreen> {
             }
           },
           child: Center(
-            child: TextWidget(text: 'Click to Scan QR', size: 20),
+            child: TextWidget(text: 'Bắt đầu quét', size: 20),
           ),
         ),
       ),

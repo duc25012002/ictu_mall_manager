@@ -3,7 +3,7 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:ictu_mall_manager/authentication/views/login-screen.dart';
 import 'package:ictu_mall_manager/dash-board/dash-board-screen.dart';
-import 'package:ictu_mall_manager/setting/views/edit-profile-screen%20copy.dart';
+import 'package:ictu_mall_manager/setting/views/change-password.dart';
 import 'package:ictu_mall_manager/setting/views/edit-profile-screen.dart';
 
 class Routes {

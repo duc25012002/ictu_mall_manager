@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/authentication/controller/auth-controller.dart';
-import 'package:ictu_mall_manager/authentication/widgets/input-password.dart';
-import 'package:ictu_mall_manager/authentication/widgets/input-email.dart';
 import 'package:ictu_mall_manager/authentication/widgets/title.dart';
 import 'package:ictu_mall_manager/utils/app-color.dart';
+import 'package:ictu_mall_manager/utils/input-email.dart';
+import 'package:ictu_mall_manager/utils/input-password.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';
 
 class LoginScreen extends StatefulWidget {

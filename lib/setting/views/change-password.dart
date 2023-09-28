@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:ictu_mall_manager/authentication/widgets/input-text.dart';
 import 'package:ictu_mall_manager/setting/controller/setting-controller.dart';
 import 'package:ictu_mall_manager/utils/app-color.dart';
+import 'package:ictu_mall_manager/utils/input-text.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';
 
 class ChangedPassword extends StatefulWidget {
@@ -15,16 +15,18 @@ class ChangedPassword extends StatefulWidget {
 }
 
 class _ChangedPasswordState extends State<ChangedPassword> {
+  //--> variables
   TextEditingController oldPassword = TextEditingController();
   TextEditingController password = TextEditingController();
   TextEditingController passwordConfirmation = TextEditingController();
   SetingController setingController = SetingController();
+
+  // --> dispose
   @override
   void dispose() {
     oldPassword.dispose();
     password.dispose();
     passwordConfirmation.dispose();
-
     super.dispose();
   }
 
@@ -52,17 +54,17 @@ class _ChangedPasswordState extends State<ChangedPassword> {
                   const SizedBox(height: 100),
                   InputText(
                     controller: oldPassword,
-                    text: 'Old Password',
+                    text: 'Mật khẩu cũ',
                   ),
                   const SizedBox(height: 50),
                   InputText(
                     controller: password,
-                    text: 'New Password',
+                    text: 'Mật khẩu mới',
                   ),
                   const SizedBox(height: 50),
                   InputText(
                     controller: passwordConfirmation,
-                    text: 'Confirm Password',
+                    text: 'Xác nhận mật khẩu',
                   ),
                   const SizedBox(height: 50),
                   SizedBox(
@@ -76,13 +78,11 @@ class _ChangedPasswordState extends State<ChangedPassword> {
                         ),
                       ),
                       onPressed: () async {
-                        //...
-
                         await setingController.changedPassword(oldPassword.text,
                             password.text, passwordConfirmation.text);
                       },
                       child: const Text(
-                        'Confirm',
+                        'Xác nhận',
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ),

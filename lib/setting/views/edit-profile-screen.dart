@@ -1,9 +1,9 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ictu_mall_manager/authentication/widgets/input-text.dart';
 import 'package:ictu_mall_manager/setting/controller/setting-controller.dart';
 import 'package:ictu_mall_manager/utils/app-color.dart';
+import 'package:ictu_mall_manager/utils/input-text.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';
 
 class EditProfileScreen extends StatefulWidget {
@@ -19,6 +19,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   TextEditingController address = TextEditingController();
   TextEditingController gender = TextEditingController();
   SetingController setingController = SetingController();
+
+  // --> dispose
   @override
   void dispose() {
     name.dispose();

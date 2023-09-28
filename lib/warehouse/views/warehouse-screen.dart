@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ictu_mall_manager/authentication/widgets/input-text.dart';
 import 'package:ictu_mall_manager/utils/app-color.dart';
+import 'package:ictu_mall_manager/utils/input-text.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
