@@ -6,7 +6,7 @@ import 'package:ictu_mall_manager/product/views/product-list-screen.dart';
 import 'package:ictu_mall_manager/sell/views/sell-screen.dart';
 import 'package:ictu_mall_manager/setting/views/setting-screen.dart';
 import 'package:ictu_mall_manager/utils/app-color.dart';
-import 'package:ictu_mall_manager/warehouse/views/warehouse-screen.dart';
+import 'package:ictu_mall_manager/history/views/history-screen.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class DashBoardScreen extends StatefulWidget {
@@ -19,7 +19,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
     HomeScreen(),
     ProductListScreen(),
     SellScreen(),
-    HistorySell(),
+    HistoryScreen(),
     SettingScreen(),
   ];
 

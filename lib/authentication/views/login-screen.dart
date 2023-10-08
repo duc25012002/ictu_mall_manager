@@ -71,15 +71,15 @@ class _LoginScreenState extends State<LoginScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const TitleInput(
-                              textInput: 'Email Address',
+                              textInput: 'Email =',
                             ),
                             const SizedBox(height: 10),
                             InputEmail(
                               controller: emailController,
-                              hint: 'Enter Your Email Address',
+                              hint: 'Email: ',
                             ),
                             const SizedBox(height: 18),
-                            const TitleInput(textInput: 'Password '),
+                            const TitleInput(textInput: 'Mật khẩu '),
                             const SizedBox(height: 10),
                             InputPassword(
                               passwordController: passwordController,
@@ -104,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   }
                                 },
                                 child: const Text(
-                                  'Login',
+                                  'Đăng nhập',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 18),
                                 ),

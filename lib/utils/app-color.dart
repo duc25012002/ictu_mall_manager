@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-class AppColor {
+abstract class AppColor {
   static const mainColor = Color.fromARGB(255, 1, 115, 187);
   static const iconColor = Color.fromARGB(255, 74, 211, 123);
 }
