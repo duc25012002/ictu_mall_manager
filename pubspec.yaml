@@ -45,6 +45,7 @@ dependencies:
       flutter_barcode_scanner: 2.0.0
       image_picker: 0.8.7
       image_cropper: ^5.0.0
+      flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
       flutter_test:
@@ -61,3 +62,4 @@ flutter:
             - assets/images/logo_app.svg
             - assets/images/avatar.jpeg
             - assets/images/add.png
+            - assets/logo_app.png

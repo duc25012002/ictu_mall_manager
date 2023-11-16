@@ -1,10 +1,10 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 // ignore_for_file: non_constant_identifier_names, prefer_const_constructors
 import 'package:get/get_navigation/src/routes/get_route.dart';
-import 'package:ictu_mall_manager/authentication/views/login-screen.dart';
-import 'package:ictu_mall_manager/dash-board/dash-board-screen.dart';
-import 'package:ictu_mall_manager/setting/views/change-password.dart';
-import 'package:ictu_mall_manager/setting/views/edit-profile-screen.dart';
+import 'package:ictu_mall_manager/views/login-screen.dart';
+import 'package:ictu_mall_manager/views/dash-board/dash-board-screen.dart';
+import 'package:ictu_mall_manager/views/change-password.dart';
+import 'package:ictu_mall_manager/views/edit-profile-screen.dart';
 
 class Routes {
   static String dashBoard = '/dashBoard';

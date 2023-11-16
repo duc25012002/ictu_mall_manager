@@ -10,9 +10,8 @@ class SaveLocal {
     print('Save data successfully');
   }
 
-  Future<String?> readDataToLocal(String key) async {
-    print('Save data successfully');
-    String data = box.read(key);
+  Future<String> readDataToLocal(String key) async {
+    String data = await box.read(key);
     return data;
   }
 }
