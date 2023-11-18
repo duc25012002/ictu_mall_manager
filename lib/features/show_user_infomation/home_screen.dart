@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
-import 'package:ictu_mall_manager/views/show_user_infomation/home-controller.dart';
+import 'package:ictu_mall_manager/features/show_user_infomation/home-controller.dart';
 
 class HomeScreen extends GetView<ShowUserInfomationController> {
   const HomeScreen({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:ictu_mall_manager/routes/routes.dart';
-import 'package:ictu_mall_manager/views/bindings/app_bingdings.dart';
+import 'package:ictu_mall_manager/features/bindings/app_bingdings.dart';
 
 main() async {
   await GetStorage.init();

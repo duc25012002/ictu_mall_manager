@@ -23,7 +23,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   // --> dispose
   @override
   void dispose() {
-    name.dispose();
+    name.dispose(); 
     date.dispose();
     address.dispose();
     gender.dispose();
@@ -43,7 +43,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                   const SizedBox(height: 30),
                   Row(
                     children: [
-                      IconButton(
+                      IconButton(               
                           onPressed: () {
                             Get.back();
                           },

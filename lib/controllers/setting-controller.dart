@@ -1,13 +1,13 @@
 // ignore_for_file: file_names
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:ictu_mall_manager/constant/api.dart';
 import 'package:ictu_mall_manager/local/save-local.dart';
 
-class SetingController {
-  SaveLocal saveLocal = SaveLocal();
-
+class SetingController extends GetxController {
   getUserToken() async {
+    SaveLocal saveLocal = SaveLocal();
     var token = await saveLocal.readDataToLocal('token');
     return token;
   }
@@ -29,7 +29,6 @@ class SetingController {
       uri.replace(queryParameters: params),
       headers: {'Authorization': 'Bearer $token'},
     );
-    print(response.body);
     if (response.statusCode == 200) {
       Fluttertoast.showToast(msg: 'Cập nhật thông tin cá nhân thành công.');
     } else {
@@ -40,7 +39,6 @@ class SetingController {
   Future<void> changedPassword(
       String oldPassword, String password, String passwordConfirmation) async {
     var token = await getUserToken();
-
     final Uri uri = Uri.parse(CHANGED_PASS);
     final Map<String, String> params = {
       'old_password': oldPassword,
@@ -48,15 +46,12 @@ class SetingController {
       'password_confirmation': passwordConfirmation,
     };
 
-    print(uri.replace(queryParameters: params));
-
     final response = await http.post(
       uri.replace(queryParameters: params),
       headers: {
         'Authorization': 'Bearer $token',
       },
     );
-    print(response.body);
     if (response.statusCode == 200) {
       Fluttertoast.showToast(msg: 'Cập nhật mật khẩu thành công.');
     } else {

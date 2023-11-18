@@ -47,6 +47,7 @@ dependencies:
       image_cropper: ^5.0.0
       flutter_launcher_icons: ^0.13.1
       lottie: ^2.7.0
+      intl: ^0.18.1
 
 dev_dependencies:
       flutter_test:
@@ -65,3 +66,4 @@ flutter:
             - assets/images/add.png
             - assets/logo_app.png
             - assets/images/logo_login_animation.json
+            - assets/images/loading.json
