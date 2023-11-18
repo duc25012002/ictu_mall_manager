@@ -24,7 +24,7 @@ class ProductController {
       };
 
       var res = await http.get(
-        Uri.parse(API.getListProductAPI),
+        Uri.parse(GET_LIST_PRO),
         headers: headers,
       );
       if (res.statusCode == 200) {

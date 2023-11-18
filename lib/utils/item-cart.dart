@@ -19,10 +19,9 @@ class ItemCart extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
-        width: MediaQuery.sizeOf(context).width,
-        height: 50,
+        width: SizeConfig.width,
+        height: SizeConfig.height! * 0.05,
         decoration: BoxDecoration(
-          color: AppColor.mainColor,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Padding(
@@ -31,15 +30,13 @@ class ItemCart extends StatelessWidget {
             children: [
               TextWidget(
                 text: text,
-                size: 18,
+                size: SizeConfig.descPx!,
                 color: Colors.white,
-                fontWeight: FontWeight.bold,
               ),
               TextWidget(
                 text: userString,
-                size: 18,
+                size: SizeConfig.descPx!,
                 color: Colors.white,
-                fontWeight: FontWeight.bold,
               ),
             ],
           ),

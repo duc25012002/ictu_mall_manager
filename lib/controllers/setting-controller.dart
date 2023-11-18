@@ -12,12 +12,10 @@ class SetingController {
     return token;
   }
 
- 
-
   Future<void> updateInformation(
       String name, String date, String address, String gender) async {
     var token = await getUserToken();
-    final Uri uri = Uri.parse(API.updateInfomation);
+    final Uri uri = Uri.parse(UPDATE_INF);
     final Map<String, String> params = {
       'name': name,
       'date': date,
@@ -43,7 +41,7 @@ class SetingController {
       String oldPassword, String password, String passwordConfirmation) async {
     var token = await getUserToken();
 
-    final Uri uri = Uri.parse(API.changedPassword);
+    final Uri uri = Uri.parse(CHANGED_PASS);
     final Map<String, String> params = {
       'old_password': oldPassword,
       'password': password,

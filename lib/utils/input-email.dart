@@ -1,6 +1,8 @@
+// ignore: must_be_immutable
+// ignore_for_file: must_be_immutable, duplicate_ignore, file_names
+
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class InputEmail extends StatelessWidget {
   InputEmail({
     super.key,
@@ -26,23 +28,23 @@ class InputEmail extends StatelessWidget {
           color: Colors.black,
         ),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5.3122410774),
+          borderRadius: BorderRadius.circular(60),
           borderSide: const BorderSide(
             color: Color(0xffc0c0c0),
           ),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5.3122410774),
+          borderRadius: BorderRadius.circular(60),
           borderSide: const BorderSide(
             color: Color(0xffc0c0c0),
           ),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5.3122410774),
+          borderRadius: BorderRadius.circular(60),
           borderSide: const BorderSide(color: Colors.black),
         ),
         disabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(5.3122410774),
+          borderRadius: BorderRadius.circular(60),
           borderSide: const BorderSide(
             color: Color(0xffc0c0c0),
           ),

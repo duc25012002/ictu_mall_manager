@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
-import 'package:ictu_mall_manager/views/home-screen.dart';
+import 'package:ictu_mall_manager/views/show_user_infomation/home_screen.dart';
 import 'package:ictu_mall_manager/views/product-list-screen.dart';
 import 'package:ictu_mall_manager/views/sell-screen.dart';
 import 'package:ictu_mall_manager/views/history-screen.dart';
@@ -32,14 +32,14 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
-        icon: const Icon(Icons.production_quantity_limits_rounded),
+        icon: const Icon(Icons.sell),
         title: 'Products',
         activeColorPrimary: Colors.green,
         inactiveColorPrimary: Colors.grey,
       ),
       PersistentBottomNavBarItem(
         icon: const Icon(Icons.qr_code, color: Colors.white),
-        title: 'QR Sell',
+        title: 'QR Scan',
         activeColorPrimary: AppColor.mainColor,
         inactiveColorPrimary: Colors.grey,
       ),

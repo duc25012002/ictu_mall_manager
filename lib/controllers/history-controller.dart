@@ -26,7 +26,7 @@ class HistoryController {
       };
 
       final response = await http.post(
-        Uri.parse(API.getDataHistory),
+        Uri.parse(GET_LIST_HIS),
         headers: headers,
       );
 

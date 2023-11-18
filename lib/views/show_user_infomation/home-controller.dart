@@ -2,14 +2,15 @@
 
 import 'dart:convert';
 
+import 'package:get/get.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
 import 'package:ictu_mall_manager/model/user-model.dart';
 import 'package:ictu_mall_manager/local/save-local.dart';
 import 'package:http/http.dart' as http;
 
-class HomeController {
+class ShowUserInfomationController extends GetxController {
   SaveLocal saveLocal = SaveLocal();
-  UserModel userModel = UserModel();
+  Rx<UserModel?> userModel = Rx<UserModel?>(null);
 
   getUserToken() async {
     var token = await saveLocal.readDataToLocal('token');
@@ -17,17 +18,17 @@ class HomeController {
     return token;
   }
 
-  Future<UserModel> getUserModel() async {
+  Future<Rx<UserModel?>> getUserModel() async {
     var token = await getUserToken();
     try {
-      var res = await http.post(Uri.parse(API.getUserInfomation), headers: {
+      var res = await http.post(Uri.parse(GET_USER_INF), headers: {
         'Authorization': 'Bearer $token',
       });
       if (res.statusCode == 200) {
         print('${res.statusCode}😂');
         var resUserInfomation = jsonDecode(res.body);
 
-        userModel = UserModel(
+        userModel.value = UserModel(
           name: resUserInfomation['data']['name'],
           email: resUserInfomation['data']['email'],
           address: resUserInfomation['data']['dia_chi'],
@@ -36,9 +37,9 @@ class HomeController {
           avatar: resUserInfomation['data']['avatar'],
           phone: resUserInfomation['data']['sdt'],
         );
-        await saveLocal.writeDataToLocal('email', userModel.email!);
+        await saveLocal.writeDataToLocal('email', userModel.value!.email!);
       } else {
-        print('${res.statusCode}X😂');
+        print('${res.statusCode}');
       }
     } catch (exception) {
       print(exception.toString());

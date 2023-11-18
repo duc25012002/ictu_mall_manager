@@ -30,7 +30,6 @@ class _ProductListScreenState extends State<ProductListScreen> {
         } else if (snapshot.hasData) {
           final productList = snapshot.data;
           return Scaffold(
-            backgroundColor: Colors.grey.withOpacity(.2),
             body: Column(
               children: [
                 const SizedBox(height: 50),

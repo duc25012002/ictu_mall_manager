@@ -3,6 +3,7 @@ import 'package:get/get_rx/src/rx_types/rx_types.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
 class InputPassword extends StatelessWidget {
+  
   const InputPassword({
     super.key,
     required this.passwordController,
@@ -20,7 +21,7 @@ class InputPassword extends StatelessWidget {
         obscureText: isObsecured.value,
         validator: (value) {
           if (value!.isEmpty || value.length < 6) {
-            return 'Password must be over 6 characters';
+            return 'Mật khẩu phải trên 6 ký tự.';
           }
           return null;
         },
@@ -36,26 +37,26 @@ class InputPassword extends StatelessWidget {
               ),
             ),
           ),
-          hintText: 'Enter your password',
+          hintText: 'Mật khẩu',
           labelStyle: const TextStyle(
             color: Colors.black,
           ),
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5.3122410774),
+            borderRadius: BorderRadius.circular(60),
             borderSide: const BorderSide(color: Color(0xffc0c0c0)),
           ),
           enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5.3122410774),
+            borderRadius: BorderRadius.circular(60),
             borderSide: const BorderSide(
               color: Color(0xffc0c0c0),
             ),
           ),
           focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5.3122410774),
+            borderRadius: BorderRadius.circular(60),
             borderSide: const BorderSide(color: Colors.black),
           ),
           disabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(5.3122410774),
+            borderRadius: BorderRadius.circular(60),
             borderSide: const BorderSide(
               color: Color(0xffc0c0c0),
             ),
