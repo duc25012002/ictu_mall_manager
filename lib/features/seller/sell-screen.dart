@@ -5,14 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
-import 'package:ictu_mall_manager/controllers/sell-controller.dart';
+import 'package:ictu_mall_manager/features/seller/sell-controller.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';
 
 class SellScreen extends StatefulWidget {
-  int onClick;
-  SellScreen({
+  const SellScreen({
     Key? key,
-    required this.onClick,
   }) : super(key: key);
 
   @override

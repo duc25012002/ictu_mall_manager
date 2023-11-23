@@ -1,15 +1,15 @@
-// ignore_for_file: unnecessary_null_comparison
+// ignore_for_file: unnecessary_null_comparison, file_names
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
-import 'package:ictu_mall_manager/features/get_list_product/get_list_product_controller.dart';
+import 'package:ictu_mall_manager/features/history/history-controller.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
 
-class GetListProductScreen extends GetView<GetListProductController> {
-  const GetListProductScreen({Key? key}) : super(key: key);
+class GetListHistoryScreen extends GetView<GetListHistoryController> {
+  const GetListHistoryScreen({Key? key}) : super(key: key);
 
   convertTextToVND(String text) {
     int convert = int.parse(text);
@@ -32,17 +32,17 @@ class GetListProductScreen extends GetView<GetListProductController> {
               return const Center(child: CircularProgressIndicator());
             } else {
               return SafeArea(
-                child: controller.productList.isNotEmpty
+                child: controller.historyList.isNotEmpty
                     ? Padding(
                         padding: const EdgeInsets.symmetric(vertical: 30),
                         child: ListView.separated(
-                          itemCount: controller.productList.length,
+                          itemCount: controller.historyList.length,
                           separatorBuilder: (BuildContext context, int index) =>
                               const Divider(
                             color: Colors.black45,
                           ),
                           itemBuilder: (context, index) {
-                            final product = controller.productList[index];
+                            final product = controller.historyList[index];
                             return ListTile(
                               subtitle: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,7 +50,7 @@ class GetListProductScreen extends GetView<GetListProductController> {
                                   Row(
                                     children: [
                                       Image.network(
-                                        product.img,
+                                        product.hangHoa!.img,
                                         width: 60,
                                         height: 60,
                                         errorBuilder:
@@ -65,26 +65,28 @@ class GetListProductScreen extends GetView<GetListProductController> {
                                         children: [
                                           TextWidget(
                                             text:
-                                                '${product.tenHangHoa}'.trim(),
-                                            size: 13,
-                                            color: Colors.black,
-                                          ),
-                                          TextWidget(
-                                            text:
-                                                'Giá bán: ${convertTextToVND(product.giaBan!)} VNĐ'
+                                                '${product.hangHoa!.tenHangHoa}'
                                                     .trim(),
                                             size: 13,
                                             color: Colors.black,
                                           ),
                                           TextWidget(
-                                            text: 'Barcode: ${product.barcode}'
-                                                .trim(),
+                                            text:
+                                                'Giá bán: ${convertTextToVND(product.hangHoa!.giaBan!)} VNĐ'
+                                                    .trim(),
                                             size: 13,
                                             color: Colors.black,
                                           ),
                                           TextWidget(
                                             text:
-                                                'Đơn vị tính: ${product.donViTinh}'
+                                                'Barcode: ${product.hangHoa!.barcode!}'
+                                                    .trim(),
+                                            size: 13,
+                                            color: Colors.black,
+                                          ),
+                                          TextWidget(
+                                            text:
+                                                'Đơn vị tính: ${product.hangHoa!.donViTinh}'
                                                     .trim(),
                                             size: 13,
                                             color: Colors.black,

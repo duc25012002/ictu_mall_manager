@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
+import 'package:ictu_mall_manager/features/seller/sell-screen.dart';
 import 'package:ictu_mall_manager/features/show_user_infomation/home_screen.dart';
 import 'package:ictu_mall_manager/features/get_list_product/get_list_product_screen.dart';
-import 'package:ictu_mall_manager/features/sell-screen.dart';
-import 'package:ictu_mall_manager/features/history-screen.dart';
-import 'package:ictu_mall_manager/features/update_user_infomation/setting-screen.dart';
+import 'package:ictu_mall_manager/features/history/history-screen.dart';
+import 'package:ictu_mall_manager/features/setting/setting_screen.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class DashBoardScreen extends StatefulWidget {
@@ -18,8 +18,8 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   final List<Widget> _screens = [
     const HomeScreen(),
     const GetListProductScreen(),
-    SellScreen(onClick: 1),
-    const HistoryScreen(),
+    const SellScreen(),
+    const GetListHistoryScreen(),
     const SettingScreen(),
   ];
 

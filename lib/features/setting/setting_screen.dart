@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
 import 'package:ictu_mall_manager/routes/routes.dart';
-import 'package:ictu_mall_manager/controllers/setting-controller.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';
 
 class SettingScreen extends StatefulWidget {
@@ -15,8 +14,6 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
-  SetingController setingController = SetingController();
-
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
