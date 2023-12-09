@@ -14,7 +14,7 @@ class SellController {
     if (response.statusCode == 200) {
       Fluttertoast.showToast(msg: 'Thành công');
     } else {
-      Fluttertoast.showToast(msg: 'Lỗi kết nối với Server');
+      Fluttertoast.showToast(msg: 'Quét QR thất bại');
       throw Exception('Failed to load data');
     }
   }

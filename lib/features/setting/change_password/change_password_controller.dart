@@ -16,7 +16,6 @@ class ChangePasswordController extends GetxController {
     oldPasswordController.dispose();
     passwordController.dispose();
     passwordConfirmationController.dispose();
-
     super.dispose();
   }
 
@@ -29,17 +28,28 @@ class ChangePasswordController extends GetxController {
       'password': passwordController.text,
       'password_confirmation': passwordConfirmationController.text,
     };
-
-    final response = await http.post(
-      uri.replace(queryParameters: params),
-      headers: {
-        'Authorization': 'Bearer $token',
-      },
-    );
-    if (response.statusCode == 200) {
-      Fluttertoast.showToast(msg: 'Cập nhật mật khẩu thành công.');
+    if (passwordController.text
+            .toLowerCase()
+            .contains(RegExp(r'[!@#%^&*(),.?":{}|<>]')) &&
+        passwordConfirmationController.text == passwordController.text) {
+      final response = await http.post(
+        uri.replace(queryParameters: params),
+        headers: {
+          'Authorization': 'Bearer $token',
+        },
+      );
+      if (response.statusCode == 200) {
+        Fluttertoast.showToast(msg: 'Cập nhật mật khẩu thành công.');
+        Get.back();
+      } else {
+        Fluttertoast.showToast(msg: 'Vui lòng cập nhật lại mật khẩu.');
+      }
     } else {
-      Fluttertoast.showToast(msg: 'Vui lòng cập nhật lại mật khẩu.');
+      Fluttertoast.showToast(
+        msg:
+            "Mật khẩu phải chứ ký tự !@#%^&*(),.?\":{}|<>\nMật khẩu xác nhận phải bằng mật khẩu cập nhật!",
+        timeInSecForIosWeb: 3,
+      );
     }
   }
 }

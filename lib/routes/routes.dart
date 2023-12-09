@@ -8,8 +8,8 @@ import 'package:ictu_mall_manager/features/get_list_product/get_list_product_bin
 import 'package:ictu_mall_manager/features/get_list_product/get_list_product_screen.dart';
 import 'package:ictu_mall_manager/features/history/history-screen.dart';
 import 'package:ictu_mall_manager/features/setting/change_password/change_password_binding.dart';
-import 'package:ictu_mall_manager/features/setting/change_password_screen.dart';
-import 'package:ictu_mall_manager/features/setting/update_infomation/update_infomation.controller.dart';
+import 'package:ictu_mall_manager/features/setting/change_password/change_password_screen.dart';
+import 'package:ictu_mall_manager/features/setting/update_infomation/update_infomation_screen.dart';
 import 'package:ictu_mall_manager/features/setting/update_infomation/update_infomation_binding.dart';
 import 'package:ictu_mall_manager/features/show_user_infomation/home_screen.dart';
 import 'package:ictu_mall_manager/features/show_user_infomation/show_user_infomation_binding.dart';
@@ -52,6 +52,6 @@ final getPages = [
       binding: UpdateUserInfoBinding()),
   GetPage(
       name: Routes.changedPass,
-      page: () => ChangedPassword(),
+      page: () => ChangedPasswordScreen(),
       binding: ChangePasswordBinding()),
 ];

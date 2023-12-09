@@ -57,7 +57,6 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
       ),
     ];
   }
-
   final PersistentTabController _controller =
       PersistentTabController(initialIndex: 0);
 

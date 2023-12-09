@@ -6,8 +6,8 @@ import 'package:ictu_mall_manager/features/setting/change_password/change_passwo
 import 'package:ictu_mall_manager/utils/input-text.dart';
 import 'package:ictu_mall_manager/utils/text-widget.dart';
 
-class ChangedPassword extends GetView<ChangePasswordController> {
-  const ChangedPassword({Key? key}) : super(key: key);
+class ChangedPasswordScreen extends GetView<ChangePasswordController> {
+  const ChangedPasswordScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
