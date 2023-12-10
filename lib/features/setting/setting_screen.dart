@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
 import 'package:ictu_mall_manager/routes/routes.dart';
-import 'package:ictu_mall_manager/utils/text-widget.dart';
+import 'package:ictu_mall_manager/utils/text_widget.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({super.key});

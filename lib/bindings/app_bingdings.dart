@@ -2,8 +2,8 @@
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/features/authentication/auth_controller.dart';
 import 'package:ictu_mall_manager/features/get_list_product/get_list_product_controller.dart';
-import 'package:ictu_mall_manager/features/history/history-controller.dart';
-import 'package:ictu_mall_manager/features/show_user_infomation/home-controller.dart';
+import 'package:ictu_mall_manager/features/history/history_controller.dart';
+import 'package:ictu_mall_manager/features/show_user_infomation/home_controller.dart';
 
 class AppBindings implements Bindings {
   @override

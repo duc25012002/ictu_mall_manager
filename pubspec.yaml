@@ -50,6 +50,7 @@ dependencies:
       intl: ^0.18.1
       internet_connection_checker: ^1.0.0+1
       flutter_cupertino_date_picker_fork: ^1.0.7
+      just_audio: ^0.9.36
 
 dev_dependencies:
       flutter_test:
@@ -69,3 +70,4 @@ flutter:
             - assets/logo_app.png
             - assets/images/logo_login_animation.json
             - assets/images/loading.json
+            - assets/audio/bip_bip.mp3

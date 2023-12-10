@@ -4,7 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:ictu_mall_manager/constant/api.dart';
-import 'package:ictu_mall_manager/local/save-local.dart';
+import 'package:ictu_mall_manager/local/save_local.dart';
 
 class ChangePasswordController extends GetxController {
   final oldPasswordController = TextEditingController();
@@ -39,15 +39,15 @@ class ChangePasswordController extends GetxController {
         },
       );
       if (response.statusCode == 200) {
-        Fluttertoast.showToast(msg: 'Cập nhật mật khẩu thành công.');
+        Fluttertoast.showToast(msg: 'Cập nhật mật khẩu thành công!');
         Get.back();
       } else {
-        Fluttertoast.showToast(msg: 'Vui lòng cập nhật lại mật khẩu.');
+        Fluttertoast.showToast(msg: 'Vui lòng cập nhật lại mật khẩu!');
       }
     } else {
       Fluttertoast.showToast(
         msg:
-            "Mật khẩu phải chứ ký tự !@#%^&*(),.?\":{}|<>\nMật khẩu xác nhận phải bằng mật khẩu cập nhật!",
+            "Mật khẩu phải chứ ký tự !@#%^&*(),.?\":{}|<>\nMật khẩu xác nhận phải giống mật khẩu cập nhật!",
         timeInSecForIosWeb: 3,
       );
     }

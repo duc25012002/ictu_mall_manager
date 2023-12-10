@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
 import 'package:ictu_mall_manager/features/get_list_product/get_list_product_controller.dart';
-import 'package:ictu_mall_manager/utils/text-widget.dart';
+import 'package:ictu_mall_manager/utils/text_widget.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
 
@@ -29,7 +29,7 @@ class GetListProductScreen extends GetView<GetListProductController> {
         child: Obx(
           () {
             if (controller.getListProduct() == null) {
-              return const Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator(color: Colors.blue));
             } else {
               return SafeArea(
                 child: controller.productList.isNotEmpty

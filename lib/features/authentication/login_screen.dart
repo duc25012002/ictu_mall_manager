@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
 import 'package:ictu_mall_manager/features/authentication/auth_controller.dart';
-import 'package:ictu_mall_manager/utils/input-email.dart';
-import 'package:ictu_mall_manager/utils/input-password.dart';
-import 'package:ictu_mall_manager/utils/text-widget.dart';
+import 'package:ictu_mall_manager/utils/input_email.dart';
+import 'package:ictu_mall_manager/utils/input_password.dart';
+import 'package:ictu_mall_manager/utils/text_widget.dart';
 import 'package:lottie/lottie.dart';
 
 class LoginScreen extends GetView<AuthController> {

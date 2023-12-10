@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
 import 'package:ictu_mall_manager/features/setting/change_password/change_password_controller.dart';
-import 'package:ictu_mall_manager/utils/input-text.dart';
-import 'package:ictu_mall_manager/utils/text-widget.dart';
+import 'package:ictu_mall_manager/utils/input_text.dart';
+import 'package:ictu_mall_manager/utils/text_widget.dart';
 
 class ChangedPasswordScreen extends GetView<ChangePasswordController> {
   const ChangedPasswordScreen({Key? key}) : super(key: key);

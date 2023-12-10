@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
-import 'package:ictu_mall_manager/features/show_user_infomation/home-controller.dart';
+import 'package:ictu_mall_manager/features/show_user_infomation/home_controller.dart';
 
 class HomeScreen extends GetView<ShowUserInfomationController> {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,7 +15,8 @@ class HomeScreen extends GetView<ShowUserInfomationController> {
       future: controller.getUserModel(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(
+              child: CircularProgressIndicator(color: Colors.blue));
         } else if (snapshot.hasError) {
           return Center(child: Text('Lỗi: ${snapshot.error}'));
         } else if (snapshot.data == null) {

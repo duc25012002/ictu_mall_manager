@@ -9,7 +9,9 @@ const GET_LIST_PRO = '$IMM/api/product';
 const POST_BAR_CODE = '$IMM/api/xuat-kho/them-san-pham';
 const UPDATE_INF = '$IMM/api/information/update';
 const CHANGED_PASS = '$IMM/api/information/change-password';
-const GET_LIST_HIS= '$IMM/api/sale-history';
+const GET_LIST_HIS = '$IMM/api/sale-history';
+const GET_ID_ADD_PRODUCT = '$IMM/api/nhap-kho/tao-phieu/lay-phien-nhap';
+const POST_BAR_CODE_ADD_PRODUCT = '$IMM/api/nhap-kho/tao-phieu/qr-nhap';
 
 abstract class AppColor {
   static const mainColor = Color.fromARGB(255, 1, 115, 187);

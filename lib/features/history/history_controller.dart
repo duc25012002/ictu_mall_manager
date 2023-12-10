@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:get/get.dart';
 import 'package:ictu_mall_manager/constant/api.dart';
-import 'package:ictu_mall_manager/local/save-local.dart';
+import 'package:ictu_mall_manager/local/save_local.dart';
 import 'package:http/http.dart' as http;
 import 'package:ictu_mall_manager/model/invoice.dart';
 

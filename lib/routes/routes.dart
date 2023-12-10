@@ -6,7 +6,7 @@ import 'package:ictu_mall_manager/features/authentication/login_screen_bindings.
 import 'package:ictu_mall_manager/features/dash_board/dash_board_screen.dart';
 import 'package:ictu_mall_manager/features/get_list_product/get_list_product_binding.dart';
 import 'package:ictu_mall_manager/features/get_list_product/get_list_product_screen.dart';
-import 'package:ictu_mall_manager/features/history/history-screen.dart';
+import 'package:ictu_mall_manager/features/history/history_screen.dart';
 import 'package:ictu_mall_manager/features/setting/change_password/change_password_binding.dart';
 import 'package:ictu_mall_manager/features/setting/change_password/change_password_screen.dart';
 import 'package:ictu_mall_manager/features/setting/update_infomation/update_infomation_screen.dart';
